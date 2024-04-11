@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* <uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 400 to 900 */
-
-/* .playfair-display-<uniquifier> {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
- */
- 
-
-
-
-
-
-/* Basic CSS for Navbar */
 *{
     margin: 0;
     padding: 0;  
@@ -32,14 +15,7 @@ body {
     height: 100%;
     font-family: Arial, sans-serif;
 
-    /* background-as */
-    /* background-image: repeating-conic-gradient(#0f000e 0% 25%, #2f0629 0% 50%);
-    background-position: 0 0, 96px 96px;
-    background-size: 192px 192px;
-    background-color: #2f0629; */
-    /* background-color: rgb(232, 117, 26); */
     background-color: rgb(162, 178, 159);
-
 
     display: flex;
     justify-content: center;
@@ -57,21 +33,17 @@ a{
     left: 0;
     width: 100%; 
     background-color: rgb(125, 194, 113);
-    
+    padding: 15px;
     color: #fff;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex; /* Add display flex to align items */
     flex-direction: row;
     justify-content: space-between; /* Spread items across the navbar */
     align-items: center; /* Align items vertically */
 
     z-index: 9999999999;
-
-
-    /* text-shadow: 0px 0px 4px rgba(0,0,0,0.6); */
-
-
-    /* font-size: 20px; */
+    
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 200;
@@ -79,8 +51,9 @@ a{
 }
 
 nav .brand {
-
-
+    align-items: center;
+    align-content: center;
+    /* text-align: center; */
 
     font-size: 22px;
     font-family: "Playfair Display", serif;
@@ -88,46 +61,44 @@ nav .brand {
     font-weight: 200;
     font-style: normal;
 
+    width: 20%;
+}
+
+#page-name{
+    text-align: center;
+    width: 40%;
 }
 
 
-#page-name{
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-    align-self: center;
-
-
+.brand-button-div{
+    width: 20%;
+    display: flex;
+    display: inline-block;
+    justify-content: end;
 }
 
 .nav-buttons {
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
+    text-align: right;
+    margin-right: 15px;
 }
 
-.admin-button {
-    padding: 8px 16px;
-    background-color: #47a54a;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-    margin-right: 10px;
-    box-shadow: 0px 3px 16px 0px rgba(0,0,0,0.6);
-}
-
-.admin-button:hover {
-    background-color: #419c46;
-}
 
 /* Dropdown Button Styling */
 .dropdown-button {
-    padding: 8px 16px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    /* padding-left: 4px;
+    padding-right: 4px; */
     background-color: #575555;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     color: white;
     box-shadow: 0px 3px 16px 0px rgba(0,0,0,0.6);
+    width: 80px;
+
+    text-align: center;
+    margin-right: 15px;
 }
 
 .dropdown-button:hover {
@@ -138,10 +109,12 @@ nav .brand {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 0px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    z-index: 1;       /* !!!!! */
+    width: 100px; /* Adjust as needed */
+    z-index: 1;
+    right: 10px; /* Position the dropdown content directly under the button */
+    border-radius: 5px 5px 5px 5px;
 }
+
 
 .dropdown-content a {
     color: black;
@@ -156,11 +129,6 @@ nav .brand {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-/* Positioning Admin and Dropdown Button */
-.admin-button, .dropdown-button {
-    margin-right: 10px;
 }
 
 .dropdown {
@@ -209,7 +177,8 @@ nav .brand {
 
 .cover-photo {
     position: absolute;
-    background: #ffffff url('background.jpeg') center center/cover no-repeat;
+    background: #ffffff url('Images/background.jpeg') center center/cover no-repeat;
+
     width: 100%;
     height: 100%;
     filter: blur(1px) brightness(50%);

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             postElement.classList.add('card');
             postElement.innerHTML = `
                 <div class="card-header">
-                    <img src="logo.png" alt="Avatar" class="avatar">
+                    <img src="Images/logo.png" alt="Avatar" class="avatar">
                     <div class="user-info">
                         <h3>${post.username}</h3>
                         <p class="timestamp">${post.timestamp}</p>
