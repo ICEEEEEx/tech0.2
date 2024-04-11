@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 400 to 900 */
+
+/* .playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+ */
+ 
+
+
+
+
+
+/* Basic CSS for Navbar */
+*{
+    margin: 0;
+    padding: 0;  
+
+
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+
+    /* background-as */
+    /* background-image: repeating-conic-gradient(#0f000e 0% 25%, #2f0629 0% 50%);
+    background-position: 0 0, 96px 96px;
+    background-size: 192px 192px;
+    background-color: #2f0629; */
+    /* background-color: rgb(232, 117, 26); */
+    background-color: rgb(162, 178, 159);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: WHITE;
+    text-decoration: none; 
+
+}
+
+#navbar {
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top */
+    left: 0;
+    width: 100%; 
+    background-color: rgb(125, 194, 113);
+    
+    color: #fff;
+    padding: 20px;
+    display: flex; /* Add display flex to align items */
+    flex-direction: row;
+    justify-content: space-between; /* Spread items across the navbar */
+    align-items: center; /* Align items vertically */
+
+    z-index: 9999999999;
+
+
+    /* text-shadow: 0px 0px 4px rgba(0,0,0,0.6); */
+
+
+    /* font-size: 20px; */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+nav .brand {
+
+
+
+    font-size: 22px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+
+#page-name{
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    align-self: center;
+
+
+}
+
+.nav-buttons {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.admin-button {
+    padding: 8px 16px;
+    background-color: #47a54a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+    box-shadow: 0px 3px 16px 0px rgba(0,0,0,0.6);
+}
+
+.admin-button:hover {
+    background-color: #419c46;
+}
+
+/* Dropdown Button Styling */
+.dropdown-button {
+    padding: 8px 16px;
+    background-color: #575555;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 3px 16px 0px rgba(0,0,0,0.6);
+}
+
+.dropdown-button:hover {
+    background-color: #413e3e;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 0px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;       /* !!!!! */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Positioning Admin and Dropdown Button */
+.admin-button, .dropdown-button {
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+
+/* Styles for Frontpage Content */
+.container {
+    width: 100%;
+    /* text-align: center; */
+
+    justify-content: center;
+}
+
+.content-container{
+    margin: 0 auto; /*Center */
+    /* margin-top: 40px; */
+    /* margin-bottom: 40px; */
+    /* padding-bottom: 20px; */
+    /* width: 80%; */
+    width: 100%;
+    /* background-color: rgb(229, 194, 135); */
+
+    text-align: center;
+
+    /* background-color: rgb(117, 116, 116); */
+    /* border-style: solid;
+    border-color: white;
+    border-width: 1px; */
+    border-radius: 10px;
+    /* border-style: solid; */
+
+}
+
+.frontpage {
+    position: relative;
+    height: 100vh; /* This will make the frontpage cover the entire viewport height */
+    width: 100%;
+
+    /* border-bottom: 5px solid #000000;
+     box-shadow: 0px -151px 111px -131px rgba(0,0,0,0.96) inset;
+    box-shadow: 0px 7px 86px 0px rgba(0,0,0,0.88); */
+}
+
+.cover-photo {
+    position: absolute;
+    background: #ffffff url('background.jpeg') center center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    filter: blur(1px) brightness(50%);
+
+
+    /* top: 0;
+    left: 0; */
+    /* background-image: url('background.jpeg'); pakeisti su normalia nuotrauka down the line */
+    /* background-size: cover;
+    background-position: center;
+    filter */
+
+
+}
+
+.content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /* Center vertically */
+}
+
+.box1 {
+    width: 40%;
+    padding: 20px;
+    color: white;
+    padding-left: 10%;
+
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+}
+
+.box1 h1 {
+    margin-bottom: 10px; 
+
+    font-size: 54px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    
+}
+
+.box2 {
+    width: 50%;
+
+    text-align: center;
+}
+
+.box2 img {
+    width: 100%; /* critical!!!!!!! */
+    max-width: 600px; /* Adjust maximum width as needed */
+    height: auto;
+    display: block; /* Ensure image doesn't overflow container */
+    border-radius: 50%;
+
+    filter: drop-shadow(25px 5px 10px #000000);
+
+    /* box-shadow: 0px 134px 53px -111px rgba(0,0,0,0.68); */
+}
+
+
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+    }
+
+    .box1, .box2 {
+        width: 80%;
+        padding: 20px;
+        text-align: center; /* Center content on smaller screens */
+        margin: 0;
+    }
+    .box1{
+        padding-top: 30%;
+        padding-left: 0%;
+
+        font-size: 12px;
+    }
+
+    .box1 h1 {
+        font-size: 44px;
+    }
+
+}
+
+
+    /*hobbies*/
+    /* card-hobbies content */
+    
+        .hobbiez-container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(162, 178, 159);
+            padding-bottom: 40px;
+        }
+        .hobbiez-container h1{
+            color: white;
+            margin: 20px;
+            text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+
+
+        font-size: 36px;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 450;
+        font-style: normal;
+        }
+
+        
+
+        .card-hobbies-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+            /* margin-top: 20px; */
+
+            /* border-style: solid;
+            border-color: white;
+            border-width: 1px;
+            border-radius: 5px; */
+        }
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* justify-content: space-evenly; */
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+            /* margin-top: 40px; */
+
+            
+
+
+            /* border-style: solid;
+            border-color: white;
+            border-width: 1px;
+            border-radius: 5px; */
+        }
+
+        .hobby-card {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 20px;
+            transition: transform 0.5s;
+        }
+
+        .hobby-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.5); /* Add shadow on hover */
+            text-shadow: 0 0 8px #1aff00;
+        
+            box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
+            -webkit-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
+            -moz-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
+        }
+
+        .img-container {
+            font-weight: 100;
+            position: relative;
+        }   
+
+        .background-image,
+        .cooler-image {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: opacity 0.5s, filter 0.5s;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .cooler-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .hobby-card:hover .cooler-image {
+            opacity: 1;
+            filter: brightness(90%);
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .hobby-card:hover .card-content {
+            opacity: 1;
+        }
+    
+        .card-content h1 {
+            margin-bottom: 10px;
+            color: #fff;
+            opacity: 1; /* Initially visible */
+            transition: opacity 1s;
+        }
+        
+        .music-card:hover h1 {
+            opacity: 0; /* Invisible when card is hovered */
+        }
+        
+        .card-content h2 {
+            margin-bottom: 10px;
+        }
+
+/* cardcontent pabaiga */
+
+.skill-section{
+    width: 100%;
+
+}
+
+.s-container {
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 20px; /* Added padding */
+  }
+
+  .text-container {
+    flex: 0 0 30%;
+    padding: 20px;
+  }
+
+  .skills-container {
+    flex: 1;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .skill {
+    flex: 1 1 200px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  .skill-icon{
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .skill p {
+    color: #666;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .text-container, .skills-container {
+      flex: 1;
+    }
+
+    .text-container {
+      padding: 20px;
+    }
+
+    .skill {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .s-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .text-container {
+      width: 90%; /* Adjust width as needed */
+    }
+  
+    .skills-container {
+      width: 90%; /* Adjust width as needed */
+    }
+  }
+  
+
+    /* carousel */
+   
+
+
+
+/* postai */
+
+.postsz-container /*  postu postu konteineris */
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    background-color: rgb(189, 210, 182);
+    padding-bottom: 20px;
+    
+}
+
+.postsz-container h1{
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+
+
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+}
+
+
+.posts-container{
+
+    /* border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-radius: 5px; */
+
+
+
+    /* height: 400px; veliau istrinti !!!! */
+    width: 90%;
+    /* padding: 10px; */
+
+    text-align: start;
+    
+
+}
+
+        /* CSS for Twitter-like message cards */
+
+        .posts-container .card {
+            background-color: #ffffffdc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+
+        }
+
+        .posts-container .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .posts-container .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .posts-container .user-info {
+            flex-grow: 1;
+        }
+
+        .posts-container .user-info h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .posts-container .username {
+            color: #657786;
+            font-size: 14px;
+        }
+
+        .posts-container .timestamp {
+            color: #657786;
+            font-size: 12px;
+        }
+
+        .posts-container .message-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+            .posts-button {
+                align-self: center;
+                /* background-color: #fff; */
+                background-image: none;
+                background-position: 0 90%;
+                background-repeat: repeat no-repeat;
+                background-size: 4px 3px;
+                border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+                border-style: solid;
+                border-width: 2px;
+                box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+                box-sizing: border-box;
+                color: #41403e;
+                cursor: pointer;
+                display: inline-block;
+                font-family: Neucha, sans-serif;
+                font-size: 1rem;
+                line-height: 23px;
+                outline: none;
+                padding: .75rem;
+                text-decoration: none;
+                transition: all 235ms ease-in-out;
+                border-bottom-left-radius: 15px 255px;
+                border-bottom-right-radius: 225px 15px;
+                border-top-left-radius: 255px 15px;
+                border-top-right-radius: 15px 225px;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+            }
+            
+            .posts-button:hover {
+                box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+                transform: translate3d(0, 2px, 0);
+            }
+            
+            .posts-button:focus {
+                box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+            }
+            
+            #moreBtn{
+                background-color: #47a54a;
+            }
+
+
+
+        /* Footer Styles */
+footer {
+    /* background-color: rgb(137, 129, 33); */
+    background-color: rgb(121, 135, 119);
+ 
+    color: #fff;
+    /* padding: 20px; */
+    /* display: flex;
+    justify-content: space-around; */
+    
+    /* text-align: center; */
+
+    /* width: 100%; */
+    /* height: 10vh; */
+    /* position: fixed; */
+    bottom: 0;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: row; */
+    align-content: center;
+  
+    height: 100%;
+    
+    
+}
+
+.footer-date-div{
+    width: 20%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.footer-links-div{
+    width: 90%;
+    height: auto;
+    
+    display: flex;
+    align-content: space-around;
+    justify-content: right;
+    padding-right: 5%;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+
+
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-links li {
+    /* display: inline; */
+    margin-right: 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+
