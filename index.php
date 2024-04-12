@@ -36,7 +36,7 @@
                     <h1>Donatas Tadaravičius</h1>
                     <p>Aš esu talentingas dvyliktokas iš Kauno. Man yra 18 metų ir esu Kauno Informacinių Technologijų Mokyklojos mokinys. Gimęs Kaune, esu susijęs su šiuo miestu ir visada stengiuosi prisidėti prie jo vystymo.
                     <br> <br>
-                    Esu tikras technologijų entuziastas, kuris ne tik domisi elektronika, bet ir mėgsta išsamiai tyrinėti automobilius bei sekti naujausias sporto tendencijas. Mano aktyvus požiūris į gyvenimą leidžia man būti nuolat informuotam apie pasaulio naujienas ir įvykius.</p>
+                    Esu technologijų entuziastas, kuris ne tik domisi elektronika, bet ir mėgsta išsamiai tyrinėti automobilius bei sekti naujausias sporto tendencijas. Mano aktyvus požiūris į gyvenimą leidžia man būti nuolat informuotam apie pasaulio naujienas ir įvykius.</p>
                 </div>  
                 <div class="box2">
                     <img src="images/portrait.png" alt="Portrait of Donatas Tadaravičius" id="personal-photo">
@@ -100,12 +100,7 @@
                     <?php
                     // Paimti "post'us" iš JSON file'o
                     $posts = json_decode(file_get_contents('Jsons/posts.json'), true);
-    
-                    // Reverse the order of posts (newest to oldest)
-                    $postrev = array_reverse($posts);
-
                     foreach ($posts as $post) {
-
                     }
                     ?>
                 </div>
@@ -139,8 +134,6 @@
                 </div>
             </div>
 
-
-
         </div>
         <footer>
             <div class="footer-content">
@@ -149,27 +142,17 @@
                 </div>
                 <div class="footer-links-div"> 
                     <ul class="footer-links">
-                        
-                        <!-- <li><a href="https://outlook.office.com/mail/">El-Paštas:</a> Donatas.Tadaravicius@stud.kitm.lt</li> -->
-                        <!-- <h2>Kontaktai</h2> -->
                         <li>*Donatas.Tadaravicius@stud.kitm.lt</li>
                         <li><a href="https://linktr.ee/DonatasT889">*Socialiniai Tinklai</a></li>
                         <li>*+370 603 39831</li>
- 
-                        
-                        
                         <br>
                         <li><a href="https://kitm.lt/">KITM</a></li>
-                        <li><a href="#"></a></li>
                     </ul>
                 </div>
-
             </div>
         </footer>
 
-    
     </div>
-
 
     <script src="script.js"></script>
     <script src="script-posts.js"></script>

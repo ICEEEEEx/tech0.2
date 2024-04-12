@@ -67,7 +67,6 @@ nav .brand {
     width: 40%;
 }
 
-
 .brand-button-div{
     width: 20%;
     display: flex;
@@ -79,7 +78,6 @@ nav .brand {
     text-align: right;
     margin-right: 15px;
 }
-
 
 /* Dropdown Button Styling */
 .dropdown-button {
@@ -132,7 +130,7 @@ nav .brand {
 }
 
 
-/* Styles for Frontpage Content */
+/* Front'page'o stilius */
 .container {
     width: 100%;
     justify-content: center;
@@ -348,12 +346,9 @@ nav .brand {
 
 
 /* skills */
-
 .skill-section{
     width: 100%;
-
 }
-
 
 .s-container {
     max-width: 90%;
@@ -478,96 +473,96 @@ nav .brand {
     text-align: start;
 }
 
-        /* CSS kad padaryti Twitter'io tipo zinuciu korteles */
+/* CSS kad padaryti Twitter'io tipo zinuciu korteles */
+.posts-container .card {
+    background-color: #ffffffdc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
 
-        .posts-container .card {
-            background-color: #ffffffdc;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
+}
 
-        }
+.posts-container .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
-        .posts-container .card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
+.posts-container .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
 
-        .posts-container .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+.posts-container .user-info {
+    flex-grow: 1;
+}
 
-        .posts-container .user-info {
-            flex-grow: 1;
-        }
+.posts-container .user-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
 
-        .posts-container .user-info h3 {
-            margin: 0;
-            font-size: 16px;
-            font-weight: bold;
-        }
+.posts-container .username {
+    color: #657786;
+    font-size: 14px;
+}
 
-        .posts-container .username {
-            color: #657786;
-            font-size: 14px;
-        }
+.posts-container .timestamp {
+    color: #657786;
+    font-size: 12px;
+}
 
-        .posts-container .timestamp {
-            color: #657786;
-            font-size: 12px;
-        }
+.posts-container .message-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
 
-        .posts-container .message-content {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-            .posts-button {
-                align-self: center;
-                background-image: none;
-                background-position: 0 90%;
-                background-repeat: repeat no-repeat;
-                background-size: 4px 3px;
-                border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-                border-style: solid;
-                border-width: 2px;
-                box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-                box-sizing: border-box;
-                color: #41403e;
-                cursor: pointer;
-                display: inline-block;
-                font-family: Neucha, sans-serif;
-                font-size: 1rem;
-                line-height: 23px;
-                outline: none;
-                padding: .75rem;
-                text-decoration: none;
-                transition: all 235ms ease-in-out;
-                border-bottom-left-radius: 15px 255px;
-                border-bottom-right-radius: 225px 15px;
-                border-top-left-radius: 255px 15px;
-                border-top-right-radius: 15px 225px;
-                user-select: none;
-                -webkit-user-select: none;
-                touch-action: manipulation;
-            }
-            
-            .posts-button:hover {
-                box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-                transform: translate3d(0, 2px, 0);
-            }
-            
-            .posts-button:focus {
-                box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-            }
-            
-            #moreBtn{
-                background-color: #47a54a;
-            }
+.posts-button {
+    align-self: center;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.posts-button:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+
+.posts-button:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+#moreBtn{
+    background-color: #47a54a;
+}
 
 
 /* Footer Stylius */

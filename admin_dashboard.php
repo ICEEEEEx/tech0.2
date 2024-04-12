@@ -1,48 +1,43 @@
 <?php
-// Start the session
 session_start();
-
-// Check if the user is not logged in, redirect to the login page
+// patikriname ar vartotojas yra prisijungęs, jeigu ne permetame jį į login.php
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: admin_login.php");
+    header("Location: login.php");
     exit;
 }
 
-// Handle logout
+// Atsijungimas
 if (isset($_POST['logout'])) {
-    // Unset all session variables
     session_unset();
-    // Destroy the session
     session_destroy();
-    // Redirect to the login page
-    // header("Location: admin_login.php");
-    header("Location: index.php");
+    // Permetam į login page'ą
+    header("Location: login.php");
     exit;
 }
 
-// Function to save posts or hobby cards to a JSON file
+// Funkcija, kad išsaugoti post'us arba hobby korteles į JSON file'ą
 function saveDataToJson($filename, $data) {
     $json_data = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents($filename, $json_data);
 }
 
-// Load existing posts and hobby cards
+// Užkrauname egsistuojančius post'us ir hobby korteles
 $posts = json_decode(file_get_contents('Jsons/posts.json'), true);
 $hobbies = json_decode(file_get_contents('Jsons/hobbies.json'), true);
 
 // Handle form submissions for creating or editing posts
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['create_post'])) {
-        // Create a new post
+        // sukurti naują post'ą
         $new_post = array(
-            'username' => $_SESSION['username'], // Assuming you want to associate posts with the admin user
+            'username' => $_SESSION['username'], 
             'message' => $_POST['post_message'],
             'timestamp' => date("d m Y"),
         );
         $posts[] = $new_post;
         saveDataToJson('Jsons/posts.json', $posts);
     } elseif (isset($_POST['create_hobby'])) {
-        // Create a new hobby card
+        // sukurti nauja hobby kortelę
         $new_hobby = array(
             'hobbyName' => $_POST['hobby_name'],
             'backgroundImage' => $_POST['background_image'],
@@ -52,12 +47,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hobbies[] = $new_hobby;
         saveDataToJson('Jsons/hobbies.json', $hobbies);
     } elseif (isset($_POST['edit_post'])) {
-        // Edit an existing post
+        // redaguoti egzistuojantį post'ą
         $post_index = $_POST['post_index'];
         $posts[$post_index]['message'] = $_POST['edited_message'];
         saveDataToJson('jsons/posts.json', $posts);
     } elseif (isset($_POST['edit_hobby'])) {
-        // Edit an existing hobby card
+        // redaguojame egzistuojančią pomėgių kortelę
         $hobby_index = $_POST['hobby_index'];
         $hobbies[$hobby_index]['hobbyName'] = $_POST['edited_hobby_name'];
         $hobbies[$hobby_index]['backgroundImage'] = $_POST['edited_background_image'];
@@ -65,13 +60,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hobbies[$hobby_index]['description'] = $_POST['edited_hobby_description'];
         saveDataToJson('Jsons/hobbies.json', $hobbies);
     } elseif (isset($_POST['delete_post'])) {
-        // Delete an existing post
+        // Istriname post'ą
         $post_index = $_POST['post_index'];
         unset($posts[$post_index]);
         $posts = array_values($posts); // Reset array keys
         saveDataToJson('Jsons/posts.json', $posts);
     } elseif (isset($_POST['delete_hobby'])) {
-        // Delete an existing hobby card
+        // Istriname hobby kortele
         $hobby_index = $_POST['hobby_index'];
         unset($hobbies[$hobby_index]);
         $hobbies = array_values($hobbies); // Reset array keys
