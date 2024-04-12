@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const moreBtn = document.getElementById('moreBtn');
     const hideBtn = document.getElementById('hideBtn');
     let currentPage = 1;
-    let posts = []; // Store all posts here
+    let posts = []; // čia visi post'ai
 
     function displayPosts(posts) {
         const startIndex = (currentPage - 1) * 3;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             postsContainer.appendChild(postElement);
         });
 
-        // Check if there are more posts to display
+        // Patikriname ar dar likę ne-display'inamų post'ų 
         if (posts.length > endIndex) {
             moreBtn.style.display = 'inline-block';
         } else {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function loadMorePosts() {
         currentPage++;
         loadPosts();
-        hideBtn.style.display = 'inline-block'; // Show the "hide" button when "more" is clicked
+        hideBtn.style.display = 'inline-block'; // Spustelėjus "more" mygtuką, parodome mygtuką "hide".
     }
 
     function hideExtraPosts() {

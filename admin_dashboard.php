@@ -93,6 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             border-color: white;
             border-width: 1px;
             margin-bottom: 20px;
+            padding: 5px;
         }
     </style>
 </head>
