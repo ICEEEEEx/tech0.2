@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-    </style>
- -->
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
 <body>
+
     <nav id="navbar">
         <div class="brand"id="brand"><a href="#section0"> DT</a></div>
         <div class="brand" id="page-name">PAGRINDINIS</div>
         <div class="brand-button-div">
             <div class="nav-buttons">
-                <!-- <a href="login.php"><button class="admin-button">Admin</button></a> -->
                     <div class="dropdown">
                         <button class="dropdown-button">Navigacija</button>
                         <div class="dropdown-content">
@@ -27,14 +21,12 @@
                             <a href="#section2">Post'ai</a>
                             <a href="#section3">Pomegiai</a>
                             <br>
-                            <!-- <a href="login.php"><button class="admin-button">Admin</button></a> -->
                             <a href="login.php" style="color: green;">Admin</a>
                         </div>
                     </div>
             </div>
         </div>
     </nav>
-
     <div class="container">
 
         <div class="frontpage" id="section0">
@@ -43,15 +35,14 @@
                 <div class="box1">
                     <h1>Donatas Tadaravičius</h1>
                     <p>Aš esu talentingas dvyliktokas iš Kauno. Man yra 18 metų ir esu Kauno Informacinių Technologijų Mokyklojos mokinys. Gimęs Kaune, esu susijęs su šiuo miestu ir visada stengiuosi prisidėti prie jo vystymo.
-<br> <br>
-Esu tikras technologijų entuziastas, kuris ne tik domisi elektronika, bet ir mėgsta išsamiai tyrinėti automobilius bei sekti naujausias sporto tendencijas. Mano aktyvus požiūris į gyvenimą leidžia man būti nuolat informuotam apie pasaulio naujienas ir įvykius.</p>
+                    <br> <br>
+                    Esu tikras technologijų entuziastas, kuris ne tik domisi elektronika, bet ir mėgsta išsamiai tyrinėti automobilius bei sekti naujausias sporto tendencijas. Mano aktyvus požiūris į gyvenimą leidžia man būti nuolat informuotam apie pasaulio naujienas ir įvykius.</p>
                 </div>  
                 <div class="box2">
                     <img src="images/portrait.png" alt="Portrait of Donatas Tadaravičius" id="personal-photo">
                 </div>
             </div>               
         </div>
-
 
         <div class="content-container">
 
@@ -101,25 +92,20 @@ Esu tikras technologijų entuziastas, kuris ne tik domisi elektronika, bet ir m�
                     </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>    
 
             <div class="postsz-container" id="section2">
                 <h1>Žinutės</h1>
-                <?php
-                    // $posts = json_decode(file_get_contents('Jsons/posts.json'), true);
-                ?>
                 <div class="posts-container" id="postContainer">
                     <?php
-                    // Fetch posts from JSON file
+                    // Paimti "post'us" iš JSON file'o
                     $posts = json_decode(file_get_contents('Jsons/posts.json'), true);
-                    
+    
                     // Reverse the order of posts (newest to oldest)
-                    // $posts = array_reverse($posts);
+                    $postrev = array_reverse($posts);
 
-                    // Display each post
-                    foreach (array_reverse($posts) as $post) {
-                        // Display post content here
+                    foreach ($posts as $post) {
+
                     }
                     ?>
                 </div>
@@ -148,7 +134,7 @@ Esu tikras technologijų entuziastas, kuris ne tik domisi elektronika, bet ir m�
                         echo '<p>' . $hobby['description'] . '</p>';
                         echo '</div>';
                         echo '</div>';
-                    }
+                    } 
                     ?>
                 </div>
             </div>

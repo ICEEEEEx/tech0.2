@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;  
 
-
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -29,7 +28,7 @@ a{
 
 #navbar {
     position: fixed; /* Fixed positioning */
-    top: 0; /* Stick to the top */
+    top: 0; /* Kad butu rilipes prie virsasus */
     left: 0;
     width: 100%; 
     background-color: rgb(125, 194, 113);
@@ -37,10 +36,10 @@ a{
     color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
-    display: flex; /* Add display flex to align items */
+    display: flex; 
     flex-direction: row;
-    justify-content: space-between; /* Spread items across the navbar */
-    align-items: center; /* Align items vertically */
+    justify-content: space-between; 
+    align-items: center; /* Align items - verticaliai */
 
     z-index: 9999999999;
     
@@ -53,7 +52,6 @@ a{
 nav .brand {
     align-items: center;
     align-content: center;
-    /* text-align: center; */
 
     font-size: 22px;
     font-family: "Playfair Display", serif;
@@ -87,8 +85,7 @@ nav .brand {
 .dropdown-button {
     padding-top: 10px;
     padding-bottom: 10px; 
-    /* padding-left: 4px;
-    padding-right: 4px; */
+
     background-color: #575555;
     border: none;
     border-radius: 4px;
@@ -109,12 +106,11 @@ nav .brand {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    width: 100px; /* Adjust as needed */
+    width: 100px;
     z-index: 1;
-    right: 10px; /* Position the dropdown content directly under the button */
+    right: 10px;
     border-radius: 5px 5px 5px 5px;
 }
-
 
 .dropdown-content a {
     color: black;
@@ -136,43 +132,23 @@ nav .brand {
 }
 
 
-
 /* Styles for Frontpage Content */
 .container {
     width: 100%;
-    /* text-align: center; */
-
     justify-content: center;
 }
 
 .content-container{
-    margin: 0 auto; /*Center */
-    /* margin-top: 40px; */
-    /* margin-bottom: 40px; */
-    /* padding-bottom: 20px; */
-    /* width: 80%; */
+    margin: 0 auto; 
     width: 100%;
-    /* background-color: rgb(229, 194, 135); */
-
     text-align: center;
-
-    /* background-color: rgb(117, 116, 116); */
-    /* border-style: solid;
-    border-color: white;
-    border-width: 1px; */
-    border-radius: 10px;
-    /* border-style: solid; */
 
 }
 
 .frontpage {
     position: relative;
-    height: 100vh; /* This will make the frontpage cover the entire viewport height */
+    height: 100vh; 
     width: 100%;
-
-    /* border-bottom: 5px solid #000000;
-     box-shadow: 0px -151px 111px -131px rgba(0,0,0,0.96) inset;
-    box-shadow: 0px 7px 86px 0px rgba(0,0,0,0.88); */
 }
 
 .cover-photo {
@@ -182,16 +158,6 @@ nav .brand {
     width: 100%;
     height: 100%;
     filter: blur(1px) brightness(50%);
-
-
-    /* top: 0;
-    left: 0; */
-    /* background-image: url('background.jpeg'); pakeisti su normalia nuotrauka down the line */
-    /* background-size: cover;
-    background-position: center;
-    filter */
-
-
 }
 
 .content-wrapper {
@@ -200,7 +166,7 @@ nav .brand {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center; /* Center vertically */
+    align-items: center; /* Centruoti verticalliai */
 }
 
 .box1 {
@@ -234,27 +200,25 @@ nav .brand {
 }
 
 .box2 img {
-    width: 100%; /* critical!!!!!!! */
-    max-width: 600px; /* Adjust maximum width as needed */
+    width: 100%; /* SVARBU! */
+    max-width: 600px; 
     height: auto;
-    display: block; /* Ensure image doesn't overflow container */
+    display: block;
     border-radius: 50%;
 
     filter: drop-shadow(25px 5px 10px #000000);
-
-    /* box-shadow: 0px 134px 53px -111px rgba(0,0,0,0.68); */
 }
 
 
 @media screen and (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        flex-direction: column; /* dezutes bus sudedamos vertikaliai mazesniuose ekranuose */
     }
 
     .box1, .box2 {
         width: 80%;
         padding: 20px;
-        text-align: center; /* Center content on smaller screens */
+        text-align: center; /* turinyus bus centruoetas mazesniuose ekranuose */
         margin: 0;
     }
     .box1{
@@ -267,146 +231,123 @@ nav .brand {
     .box1 h1 {
         font-size: 44px;
     }
+}
+
+/*hobbies*/
+.hobbiez-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(162, 178, 159);
+    padding-bottom: 40px;
+}
+.hobbiez-container h1{
+    color: white;
+    margin: 20px;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    }
+
+
+
+.card-hobbies-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
 
 }
 
+.hobby-card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: transform 0.5s;
+}
 
-    /*hobbies*/
-    /* card-hobbies content */
-    
-        .hobbiez-container{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(162, 178, 159);
-            padding-bottom: 40px;
-        }
-        .hobbiez-container h1{
-            color: white;
-            margin: 20px;
-            text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+.hobby-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.5); /* sukuriamas seselis, kai uzvedama ant korteles */
+    text-shadow: 0 0 8px #1aff00;
+
+    box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
+    -webkit-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
+    -moz-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
+}
+
+.img-container {
+    font-weight: 100;
+    position: relative;
+}   
+
+.background-image,
+.cooler-image {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.5s, filter 0.5s;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cooler-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.hobby-card:hover .cooler-image {
+    opacity: 1;
+    filter: brightness(90%);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hobby-card:hover .card-content {
+    opacity: 1;
+}
+
+.card-content h1 {
+    margin-bottom: 10px;
+    color: #fff;
+    opacity: 1; /* Matomas */
+    transition: opacity 1s;
+}
+
+.card-content h2 {
+    margin-bottom: 10px;
+}
 
 
-        font-size: 36px;
-        font-family: "Playfair Display", serif;
-        font-optical-sizing: auto;
-        font-weight: 450;
-        font-style: normal;
-        }
-
-        
-
-        .card-hobbies-container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 90%;
-            margin: 0 auto;
-            /* margin-top: 20px; */
-
-            /* border-style: solid;
-            border-color: white;
-            border-width: 1px;
-            border-radius: 5px; */
-        }
-        .card-container{
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            /* justify-content: space-evenly; */
-            justify-content: center;
-            width: 90%;
-            margin: 0 auto;
-            /* margin-top: 40px; */
-
-            
-
-
-            /* border-style: solid;
-            border-color: white;
-            border-width: 1px;
-            border-radius: 5px; */
-        }
-
-        .hobby-card {
-            position: relative;
-            width: 250px;
-            height: 350px;
-            overflow: hidden;
-            border-radius: 10px;
-            margin: 20px;
-            transition: transform 0.5s;
-        }
-
-        .hobby-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 35px rgba(255, 255, 255, 0.5); /* Add shadow on hover */
-            text-shadow: 0 0 8px #1aff00;
-        
-            box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
-            -webkit-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
-            -moz-box-shadow: 0px 0px 24px 6px rgba(0,0,0,0.46) inset;
-        }
-
-        .img-container {
-            font-weight: 100;
-            position: relative;
-        }   
-
-        .background-image,
-        .cooler-image {
-            width: 100%; 
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: opacity 0.5s, filter 0.5s;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .cooler-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-        }
-
-        .hobby-card:hover .cooler-image {
-            opacity: 1;
-            filter: brightness(90%);
-        }
-
-        .card-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-
-        .hobby-card:hover .card-content {
-            opacity: 1;
-        }
-    
-        .card-content h1 {
-            margin-bottom: 10px;
-            color: #fff;
-            opacity: 1; /* Initially visible */
-            transition: opacity 1s;
-        }
-        
-        .music-card:hover h1 {
-            opacity: 0; /* Invisible when card is hovered */
-        }
-        
-        .card-content h2 {
-            margin-bottom: 10px;
-        }
-
-/* cardcontent pabaiga */
+/* skills */
 
 .skill-section{
     width: 100%;
@@ -421,94 +362,88 @@ nav .brand {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
-    padding: 20px; /* Added padding */
-  }
-  .s-container h2{
+    padding: 20px;
+}
+.s-container h2{
     margin-bottom: 5px;
-  }
+}
 
-  .text-container {
+.text-container {
     flex: 0 0 30%;
     padding: 20px;
-  }
+}
 
-  .skills-container {
+.skills-container {
     flex: 1;
-  }
+}
 
-  .skills {
+.skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
+}
 
-  .skill {
+.skill {
     flex: 1 1 200px;
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
-  }
-  .skill-icon{
+}
+.skill-icon{
     width: 60px;
     height: 60px;
-  }
+}
 
-  .skill h3 {
+.skill h3 {
     margin-bottom: 10px;
     color: #333;
-    
-  }
 
-  .skill p {
+}
+
+.skill p {
     color: #666;
-  }
+}
 
-  .icon {
+.icon {
     width: 60px;
     height: 60px;
     margin-bottom: 10px;
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .container {
-      flex-direction: column;
+        flex-direction: column;
     }
 
     .text-container, .skills-container {
-      flex: 1;
+        flex: 1;
     }
 
     .text-container {
-      padding: 20px;
+        padding: 20px;
     }
 
     .skill {
-      flex-basis: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
     }
-  }
+    }
 
-  @media (max-width: 1200px) {
+    @media (max-width: 1200px) {
     .s-container {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .text-container {
-      width: 90%; /* Adjust width as needed */
+        width: 90%; 
     }
-  
+
     .skills-container {
-      width: 90%; /* Adjust width as needed */
+        width: 90%; 
     }
-  }
-  
-
-    /* carousel */
-   
-
-
+}
 
 /* postai */
 
@@ -539,24 +474,11 @@ nav .brand {
 
 
 .posts-container{
-
-    /* border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-width: 1px;
-    border-radius: 5px; */
-
-
-
-    /* height: 400px; veliau istrinti !!!! */
     width: 90%;
-    /* padding: 10px; */
-
     text-align: start;
-    
-
 }
 
-        /* CSS for Twitter-like message cards */
+        /* CSS kad padaryti Twitter'io tipo zinuciu korteles */
 
         .posts-container .card {
             background-color: #ffffffdc;
@@ -606,7 +528,6 @@ nav .brand {
         }
             .posts-button {
                 align-self: center;
-                /* background-color: #fff; */
                 background-image: none;
                 background-position: 0 90%;
                 background-repeat: repeat no-repeat;
@@ -649,40 +570,22 @@ nav .brand {
             }
 
 
-
-        /* Footer Styles */
+/* Footer Stylius */
 footer {
-    /* background-color: rgb(137, 129, 33); */
     background-color: rgb(121, 135, 119);
- 
     color: #fff;
-    /* padding: 20px; */
-    /* display: flex;
-    justify-content: space-around; */
-    
-    /* text-align: center; */
-
-    /* width: 100%; */
-    /* height: 10vh; */
-    /* position: fixed; */
     bottom: 0;
     height: 20vh;
     margin: 0;
     padding: 0;
     width: 100%;
-
-
 }
 
 .footer-content {
     display: flex;
     justify-content: space-around;
-    /* flex-direction: row; */
     align-content: center;
-  
     height: 100%;
-    
-    
 }
 
 .footer-date-div{
@@ -696,24 +599,18 @@ footer {
 .footer-links-div{
     width: 90%;
     height: auto;
-    
     display: flex;
     align-content: space-around;
     justify-content: right;
     padding-right: 5%;
-    /* justify-content: center; */
     align-items: center;
-    
 }
-
-
 
 .footer-links {
     list-style-type: none;
 }
 
 .footer-links li {
-    /* display: inline; */
     margin-right: 10px;
 }
 
@@ -725,5 +622,3 @@ footer {
 .footer-links li a:hover {
     text-decoration: underline;
 }
-
-
