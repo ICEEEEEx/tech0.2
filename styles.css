@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 *{
+    
     margin: 0;
     padding: 0;  
 
@@ -173,11 +174,12 @@ nav .brand {
     color: white;
     padding-left: 10%;
 
-    font-size: 18px;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 50;
     font-style: normal;
+
+    font-size: 22px;
 }
 
 .box1 h1 {
@@ -191,9 +193,9 @@ nav .brand {
     
 }
 
+
 .box2 {
     width: 50%;
-
     text-align: center;
 }
 
@@ -223,7 +225,7 @@ nav .brand {
         padding-top: 30%;
         padding-left: 0%;
 
-        font-size: 12px;
+        font-size: 18px;
     }
 
     .box1 h1 {
@@ -366,6 +368,8 @@ nav .brand {
 .text-container {
     flex: 0 0 30%;
     padding: 20px;
+    font-size: 18px;
+    margin: 0;
 }
 
 .skills-container {

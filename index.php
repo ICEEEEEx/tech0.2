@@ -51,10 +51,7 @@
                     <div class="text-container">
                         <h2>Apie mano įgudžius</h2>
                         <p>Esu įgijęs išsamią svetainės kūrimo patirtį ir esu stiprus HTML, CSS, JavaScript ir PHP įgūdžių srityse. Mano žinios apima visas pagrindines svetainių kūrimo kalbas, kurios leidžia man kurti funkcionalias ir vizualiai patrauklias interneto svetaines.
-                        <br>
-                        Įrankiai:
-                        <br>
-                        Turiu patirties naudojant įvairias programavimo priemones, tačiau ypač išmanau naudotis Visual Studio Code ("VSCode"). Tai puikus kūrimo įrankis, kurį naudoju kiekvieną dieną, kai kuriu ir redaguoju savo svetainių projektus. VSCode suteikia man efektyvumą ir lankstumą, ji man suteikia galimybę greitai ir efektyviai kurti kodą bei testuoti svetainės funkcionalumą.</p>
+                        </p>
                     </div>
                     <div class="skills-container">
                         <h2>Įgudžiai</h2> 
