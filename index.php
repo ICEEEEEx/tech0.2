@@ -49,12 +49,12 @@
             <div class="skill-section" id="section1">
                 <div class="s-container">
                     <div class="text-container">
-                        <h2>Apie mano įgudžius</h2>
+                        <h2>Apie mano įgūdžius</h2>
                         <p>Esu įgijęs išsamią svetainės kūrimo patirtį ir esu stiprus HTML, CSS, JavaScript ir PHP įgūdžių srityse. Mano žinios apima visas pagrindines svetainių kūrimo kalbas, kurios leidžia man kurti funkcionalias ir vizualiai patrauklias interneto svetaines.
                         </p>
                     </div>
                     <div class="skills-container">
-                        <h2>Įgudžiai</h2> 
+                        <h2>Įgūdžiai</h2> 
                     <div class="skills">
                         <div class="skill">
                             <img src="icons/html.png" alt="HTML Icon" class="skill-icon">

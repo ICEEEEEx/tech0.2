@@ -87,6 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             display: flex;
             flex-direction: column;
             color: white;
+            font-size: 18px;
         }
         form{
             border-style: solid;
